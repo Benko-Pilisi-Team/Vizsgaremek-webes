@@ -1,26 +1,50 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<script setup> 
+   import NavBar from './components/NavBar.vue';
+   import './js/locale.hu.js'
+   import { isLoggedIn } from './store/auth'
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
 </script>
 
+<script>
+export default {
+    methods: {
+        isLoggedIn() {
+            return isLoggedIn()
+        }
+    }
+}
+</script>
+<template >
+  <NavBar />
+  <router-view/>
+  
+</template>
+
 <style>
+body, html {
+  width: 100%;
+  min-height: 100vh;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+
 </style>
