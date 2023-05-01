@@ -2,24 +2,7 @@
   <div>
       <h3 class="text-center mt-5 mb-5">Belépés munkatársaink részére:</h3>
     </div>
-    <!-- <div class="loginContainer text-center mt-5 mb-5">
-      <div class="container form-group">
-        <div class="text-center mx-auto  row nav-row col-lg-6 col-sm-6 col-md-6 col-6">
-          <form id="loginForm" method="post">
-            <div class="form-outline mb-4">
-            <h5  class="form-label" for="username">Felhasználónév</h5>
-            <input class="form-control mb-3" type="email" id="username"  v-model="username"/>
-          </div>
-            <h5 class="form-label" for="password">Jelszó</h5>
-            <input class="form-control" type="password" id="password" v-model="password"/>
-            <div>
-              <input class="btn btn-success loginBtn" type="button" value="Belépés" id="submit" @click="login()" />
-            </div>
-          </form>
-        </div>
-      </div>
-    </div> -->
-
+    
     <div class="login-page">
   <div class="form" >
     <form class="login-form"  method="post">
@@ -31,62 +14,6 @@
 </div>
 </template>
 
-<script setup>
-//import axios from 'axios'
-//import { ref, onMounted } from 'vue';
-//import router from '../router'
-//import NavBar from '@/components/NavBar.vue';
-//import '../assets/main.css'
-//import axios from 'axios';
-//import { loginUser } from '@/store/auth.vue';
-
-  //TODO:
-  //1. store the token in a localstorage
-  //2. authenticate user, and redirect if not logged in
-  //3. check from the localstorage if token expired and log out user
-
-  
-  // const login = async () => {
-      
-  //   var user = document.getElementById("username").value;
-  //   var pass = document.getElementById("password").value;
-
-  //   var data = {nev : user, jelszo: pass}
-  //   try {
-  //     const resp = axios.post("http://localhost:5000/api/felhasznalo/authenticate", data)
-  //     .then(response => {
-  //       return checkLogin(response.status) ,
-  //       window.localStorage.
-  //       setItem("token", response.data.token)
-        
-  //     });
-  //     console.log(resp);
-  //   }
-  //   catch (error) {
-  //     console.log(error);
-  //   }
-    
-    
-  // };
-
-
-  // const checkLogin = function (val) {
-  //   if (val === 200) {
-  //     router.push({ path: '/boltok' })
-  //     NavBar.document.getElementById("visitor").visibility = false;
-
-  //     return false;
-  //   } else {
-  //     alert("Hibás felhasználónév vagy jelszó");
-  //     return false;
-  //   }
-  // }
-
-  //  const body = '{"nev":' + nevExists + ', "jelszo":' + jelszoExists + '}';
-  //  const obj = JSON.parse(body);
-
-
-</script>
 <script>
 import { loginUser } from '@/store/auth.js';
 

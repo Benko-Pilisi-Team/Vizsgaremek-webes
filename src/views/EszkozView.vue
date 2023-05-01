@@ -184,17 +184,7 @@ export default {
           wrapText: true,
           autoHeight: true,
           cellStyle : params => params.value.length <= minEszkozNeve ? {backgroundColor : 'red'} : {backgroundColor : 'transparent'},
-          // cellStyle: function(params) {
-          //   console.log(params.value)
-          //   if (params.value==null){ 
-          //       return {backgroundColor: '#ff0000'};
-          //       //console.log(params.newValue);
-
-          //       }
-          //   else { 
-          //   return {color: 'red', backgroundColor: 'black'};
-          //   }
-          //   },
+          
           minWidth: 80,
           sortable: true,
           filterParams: {
@@ -256,7 +246,6 @@ export default {
           //       return `<input type='checkbox' @click="checkedHandler(params)"
           //  ${params.value ? 'checked' : ''} />`; }
           
-
         },
         {
           headerName: "Kedvezményes",
@@ -369,34 +358,6 @@ export default {
     };
   }
 };
-
-
-
-
-// const dateFormat = function dateFormat(params) { //Reformat the parameters
-//   return Date.format('YYYY MM dd')
-// };
-
-// const formatted = function formatted(params) {
-//   const datum = params.value;
-//   return useDateFormat(datum, 'YYYY');
-// };
-
-// const GuaranteeFormat = function GuaranteeFormat(params) { //Reformat the parameters
-//   if (params.value == 1) {
-//     return "Garanciális"
-//   } else {
-//     return "Nem garanciális"
-//   }
-// };
-
-// const DiscountFormat = function DiscountFormat(params) {
-//   if (params.value == 1) {
-//     return "Kedvezményes"
-//   } else {
-//     return "Nem kedvezményes"
-//   }
-// };
 
 </script>
  
